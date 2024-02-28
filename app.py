@@ -46,8 +46,7 @@ def write_streamlit() -> None:
     # Get the input area of interest
     input_text = st.text_input("Area of Interest", key="interest")
     
-    # Get the response from langchain when button is pressed
-    
+    # Get the response from langchain when button is pressed    
     submit_button = st.button("Get Channels")
     
     if submit_button:
