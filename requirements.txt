@@ -1,0 +1,7 @@
+langchain
+openai
+python-dotenv
+langchain_openai
+huggingface_hub
+streamlit
+emoji
