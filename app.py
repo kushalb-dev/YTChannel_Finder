@@ -5,6 +5,7 @@ from langchain_openai import ChatOpenAI
 from langchain.schema import BaseOutputParser
 import streamlit as st
 import re
+import os
 import emoji
 
 # creating the parser class
@@ -20,7 +21,7 @@ def initialize() -> None:
 def get_response(input_area_of_interest: str) -> str:
     
     # creating the chat bot
-    chat_bot = ChatOpenAI(temperature=0.5)
+    chat_bot = ChatOpenAI(temperature=0.5, api_key=os.getenv("OPENAI_API_KEY"))
     
     # creating the input message template
     input_message = "Tell me 5 YouTube Channels good for {input}."
